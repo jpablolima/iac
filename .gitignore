@@ -1,7 +1,9 @@
-new_user_credentials.csv
-.terraform
-.terraform.lock.hcl
-.pem
-terraform.tfstate
-devops.pem
-terraform.tfstate.backup
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.csv
+*.pem
