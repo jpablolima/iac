@@ -27,7 +27,7 @@ resource "aws_instance" "app_server" {
   #   EOF
 
   tags = {
-    Name = "Ubuntu Server"
+    Name = "Ubuntu Server deploy Python"
   }
 }
 
