@@ -3,6 +3,12 @@ name: Terraform
 on:
     push:
         branches: ['iac']
+    workflow_dispatch:
+        inputs:
+            tfpath:
+                description: 'TF File Path'     
+                required: false
+                default: '/ec2'
 
 jobs:
     tf_code_check:
