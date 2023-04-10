@@ -8,3 +8,4 @@
 *.pem
 plan
 ec2/.terraform.lock.hcl
+keyaws
