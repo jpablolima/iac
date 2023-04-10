@@ -2,6 +2,7 @@
 
 sudo docker run --name postgres-server -t \
       -p 5432:5432 \
+      -v postgresdata:/var/lib/postgresql/data \
       -e POSTGRES_USER="zabbix" \
       -e POSTGRES_PASSWORD="zabbix" \
       -e POSTGRES_DB="zabbix" \
