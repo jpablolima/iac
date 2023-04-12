@@ -9,3 +9,5 @@
 plan
 ec2/.terraform.lock.hcl
 keyaws
+start-capgemini/keys.txt
+start-capgemini/.terraform.lock.hcl
