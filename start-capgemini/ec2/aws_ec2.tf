@@ -25,5 +25,8 @@ resource "aws_instance" "web" {
     
     tags = {
       "Name" = var.name
+      "Environment" = "production"
+      "Project": "My project"
+      "Owner" = "João Pablo"
     }
 }
