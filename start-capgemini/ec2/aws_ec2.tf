@@ -3,7 +3,7 @@ data "aws_ami" "ubuntu" {
 
     filter{
         name = "name"
-        values = [ "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*" ]
+        values = [ var.image ]
         
     }   
 
@@ -14,15 +14,16 @@ data "aws_ami" "ubuntu" {
 
     }
 
-    owners = [ "099720109477" ] # Canonical
+    owners = [ var.owners ] # Canonical
 
 }
 
 resource "aws_instance" "web" {
     ami = data.aws_ami.ubuntu.id
-    instance_type = "t2.micro"
-
+    instance_type = var.instance_type
+    key_name = var.key_name
+    
     tags = {
-      "Name" = "WebServer"
+      "Name" = var.name
     }
 }
